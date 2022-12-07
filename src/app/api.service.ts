@@ -13,4 +13,7 @@ export class ApiService {
   addemployee(dataTosend:any){
     return this.http.post("http://localhost:8080/add",dataTosend)
   }
+  searchemployee(dataTosend:any){
+    return this.http.post("http://localhost:8080/search",dataTosend)
+  }
 }

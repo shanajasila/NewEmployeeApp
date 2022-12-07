@@ -5,36 +5,36 @@
             <div class="row g-3 mt-4">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Employee Code</label>
-                    <input type="text" class="form-control">
+                    <input type="text" name="empcode" [(ngModel)]="empcode" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button  class="btn btn-success">Search</button>
+                    <button (click)="readValue()"  class="btn btn-success">Search</button>
                 </div>
             </div>
-            <div class="row mt-4 g-3">
+            <div class="row mt-4 g-3"*ngFor="let j of searchData">
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Employee Name</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" value="{{j.name}}">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Designation</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" value="{{j.designation}}">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Salary</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" value="{{j.salary}}">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Company Name</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" value="{{j.companyname}}">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Phone Nmuber</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" value="{{j.mobileno}}">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Username</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control"value="{{j.username}}">
                 </div>
             </div>
         </div>
