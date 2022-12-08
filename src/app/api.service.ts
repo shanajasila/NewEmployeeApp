@@ -10,10 +10,13 @@ export class ApiService {
   fetchemployee=()=>{
     return this.http.get("http://localhost:8080/view")
   }
-  addemployee(dataTosend:any){
+  addemployee=(dataTosend:any)=>{
     return this.http.post("http://localhost:8080/add",dataTosend)
   }
-  searchemployee(dataTosend:any){
+  searchemployee=(dataTosend:any)=>{
     return this.http.post("http://localhost:8080/search",dataTosend)
+  }
+  deleteEmployee=(dataTosend:any)=>{
+    return this.http.post("http://localhost:8080/delete",dataTosend)
   }
 }
